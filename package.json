@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "sync:users": "node src/jobs/sync-users.job.js",
+    "notify:users": "node src/jobs/send-notifications.job.js"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,30 @@
+name: Notification
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 09:00 horário de Brasília (UTC-3) = 12:00 UTC
+    - cron: '0 12 * * *'
+
+jobs:
+  run-notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.20.8'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm install
+      
+      - name: Sincronizar Usuários
+        run: npm run sync:users
+      
+      - name: Enviar Notificação para os Usuários
+        run: npm run notify:users

@@ -1,4 +1,6 @@
-# API de notificação, serverest.dev
+# API de notificação
+
+Utilizando o servido do API REST: serverest.dev
 
 Fluxo geral:
 
@@ -21,17 +23,33 @@ O projeto pode ser dividido em **4 partes principais**:
 
 Exemplo simples (Node.js, mas o conceito vale para qualquer linguagem):
 
-```
+```bash
 /project
- ├─ data/
- │   ├─ usuarios.json
- │   └─ notificacoes_enviadas.json
- ├─ services/
- │   ├─ serverestService.js
- │   ├─ notificationService.js
- │   └─ storageService.js
- ├─ index.js
- └─ README.md
+  ├── README.md
+  ├─ data/
+  │   ├─ notificacoes_enviadas.json
+  │   └─ usuarios.json
+  ├─ services/
+  │   ├─ serverestService.js
+  │   ├─ notificationService.js
+  │   └─ storageService.js
+  ├── package-lock.json
+  ├── package.json
+  ├── scripts
+  │   ├── buscar-lista.sh
+  │   ├── create.sh
+  │   └── enviar-notificacao.sh
+  ├── src
+  │   ├── app.js
+  │   ├── routes
+  │   │   ├── notificationsRoutes.js
+  │   │   └── usersRoutes.js
+  │   ├── services
+  │   │   ├── notificationService.js
+  │   │   ├── serverestService.js
+  │   │   └── storageService.js
+  │   └── utils
+  │       └── file.util.js
 ```
 
 ---

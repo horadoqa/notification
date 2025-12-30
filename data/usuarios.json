@@ -1,9 +1,5 @@
 [
   {
-    "nome": "Tico da Silva",
-    "email": "tico@qa.com.br"
-  },
-  {
     "nome": "Fulano da Silva",
     "email": "fulano@qa.com"
   },
@@ -52,6 +48,10 @@
     "email": "Rene88@yahoo.com"
   },
   {
+    "nome": "Ester Pizetta",
+    "email": "ester_pizetta1@globo.com"
+  },
+  {
     "nome": "Marcelino Zemlak",
     "email": "delcie.kuhn@gmail.com"
   },
@@ -74,6 +74,10 @@
   {
     "nome": "Fulano da Silva",
     "email": "teste_1767116722.523026@qa.com"
+  },
+  {
+    "nome": "Pedro Lins",
+    "email": "teste_k6_1404@qa.com"
   },
   {
     "nome": "Fulano da Silva",
@@ -145,6 +149,10 @@
   },
   {
     "nome": "Maria Nunes",
+    "email": "maria140@qa.com.br"
+  },
+  {
+    "nome": "Maria Nunes",
     "email": "maria3@qa.com.br"
   },
   {
@@ -166,6 +174,10 @@
   {
     "nome": "Teste User",
     "email": "test_qaa@qa.com.br"
+  },
+  {
+    "nome": "Ester Pizetta",
+    "email": "ester_pizetta2@globo.com"
   },
   {
     "nome": "Teteu QA",
@@ -198,6 +210,10 @@
   {
     "nome": "Maria Nunes",
     "email": "maria7@qa.com.br"
+  },
+  {
+    "nome": "Ester Pizetta",
+    "email": "ester_pizetta@globo.com"
   },
   {
     "nome": "Fulano da Silva",
