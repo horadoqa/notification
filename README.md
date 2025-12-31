@@ -158,13 +158,12 @@ Depois, você pode evoluir para:
 
 ---
 
-## 8️⃣ Próximo passo
+## 8️⃣ Contribuições
 
-Se quiser, posso:
+Contribuições são bem-vindas!  
+Sinta-se à vontade para abrir **issues** ou **pull requests** com melhorias, correções ou sugestões.
 
-* Te ajudar a **escolher a stack**
-* Montar o **fluxo em pseudocódigo**
-* Criar um **exemplo de código**
-* Ajudar a transformar isso em um **projeto de portfólio**
-
-É só me dizer 😄
+Antes de contribuir:
+- Crie uma branch a partir da `main`
+- Mantenha o padrão de código do projeto
+- Descreva claramente as mudanças no pull request
