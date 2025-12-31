@@ -1,6 +1,6 @@
 # API de notificação
 
-Utilizando o servido do API REST: serverest.dev
+Utilizando o servido do API REST: serverest.dev/usuarios
 
 Fluxo geral:
 
@@ -19,9 +19,7 @@ O projeto pode ser dividido em **4 partes principais**:
 
 ---
 
-## 2️⃣ Estrutura recomendada do projeto
-
-Exemplo simples (Node.js, mas o conceito vale para qualquer linguagem):
+## 2️⃣ Estrutura do projeto
 
 ```bash
 /project
@@ -67,17 +65,13 @@ Exemplo simples (Node.js, mas o conceito vale para qualquer linguagem):
 
 * Sempre sobrescrever ou atualizar o arquivo
 * Evitar duplicados (usar email como identificador)
-
-curl -X POST http://localhost:3000/users/sync
-{"message":"Usuários sincronizados com sucesso","totalRecebidos":3,"totalSalvos":3}%
-
 ---
 
 ## 4️⃣ Controle para não enviar mais de uma vez por dia
 
 Esse é o ponto mais importante da regra.
 
-Crie um arquivo, por exemplo:
+Salva os emails que foram notificados em um arquivo:
 
 ### `notificacoes_enviadas.json`
 
@@ -94,18 +88,14 @@ Crie um arquivo, por exemplo:
 
 1. Antes de enviar a notificação:
 
-   * Verifique se o email já existe
+   * Verifique se o email já existe na lista
    * Verifique se a data é **igual à data atual**
 2. Se existir → **não envia**
 3. Se não existir ou for outro dia → **envia e registra**
 
-📌 Use a data no formato `YYYY-MM-DD` para facilitar a comparação.
-
 ---
 
 ## 5️⃣ Envio da notificação
-
-Você pode começar de forma simples:
 
 ### Opções:
 
@@ -126,13 +116,9 @@ Atenciosamente,
 
 ---
 
-## 6️⃣ Agendamento (opcional, mas recomendado)
+## 6️⃣ Implementação
 
-Para rodar automaticamente:
-
-* `node-cron` (Node.js)
-* Cron do sistema
-* GitHub Actions (para aprendizado)
+* GitHub Actions
 
 Exemplo:
 
@@ -143,18 +129,18 @@ Exemplo:
 
 ## 7️⃣ Por que essa abordagem é a melhor?
 
-✅ Separação de responsabilidades
-✅ Fácil de testar
-✅ Simples de evoluir
-✅ Regras claras
-✅ Não depende de banco de dados no início
+* Separação de responsabilidades 
+* Fácil de testar
+* Simples de evoluir
+* Regras claras
+* Não depende de banco de dados no início
 
-Depois, você pode evoluir para:
+Depois, podemos evoluir para:
 
 * Banco de dados
 * API própria
 * Envio real de email
-* Dashboard
+* Dashboard (Grafana)
 
 ---
 
